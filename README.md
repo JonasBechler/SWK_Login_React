@@ -1,1 +1,1 @@
-# JonasBechler-SWK_Login_React
+# SWK_Login_React
