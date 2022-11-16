@@ -1,0 +1,3 @@
+[submodule "src/SWK_React_Template"]
+	path = src/SWK_React_Template
+	url = git@github.com:JonasBechler/SWK_React_Template.git
