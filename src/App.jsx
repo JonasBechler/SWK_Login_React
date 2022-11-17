@@ -3,6 +3,8 @@ import React from 'react'
 import config from "../../config.json"
 
 import './App.css'
+import './SWK_React_Template/src/styles/App.css'
+
 import Main from './Main';
 
 function App() {
