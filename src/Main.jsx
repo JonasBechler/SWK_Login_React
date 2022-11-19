@@ -22,12 +22,16 @@ export default function Main({name, icon, config}) {
 				
 				console.log(response)
 				if (response_lenght === 0) {
-					apiLogin.with_konstanz(config)
+					location.href = `${config.device_ip}:${config.port}/login`
 					return
 				}
 
 				else{
-					setDetails(response);
+					let response_copy = Object.assign({}, response)
+					Object.entries(response_copy).forEach(entry => {
+						response_copy[entry[0]] = entry[0]
+					})
+					setDetails(response_copy);
 					setUser(response);	
 				}
 
@@ -49,7 +53,6 @@ export default function Main({name, icon, config}) {
 
 			<AccountWidget details={details} user={user}  config={config}></AccountWidget>
 
-			<div className='Spacer'></div>
 			<div className='Spacer'></div>
 
 		</div>

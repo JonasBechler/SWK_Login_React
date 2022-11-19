@@ -9,7 +9,7 @@ import Main from './Main';
 
 function App() {
 	const name = "Login";
-	const icon = require("./KonstanzLoginLogo.jpeg");
+	const icon = require("./KonstanzLoginLogo.png");
 	config.port = config.login.port
 	config.port_react = config.login.port_react
 
