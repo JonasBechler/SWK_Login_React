@@ -51,7 +51,7 @@ export default function Main({name, icon, config}) {
 
 			<div className='Spacer'></div>
 
-			<AccountWidget details={details} user={user}  config={config}></AccountWidget>
+			<AccountWidget title={"Response"} details={details} user={user}  config={config}></AccountWidget>
 
 			<div className='Spacer'></div>
 
