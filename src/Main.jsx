@@ -3,20 +3,24 @@ import React, { useState } from 'react'
 import Header from "./SWK_React_Template/src/components/Header/Header";
 
 import AccountWidget from './SWK_React_Template/src/components/AccountWidget/AccountWidget';
-import apiUser from './SWK_React_Template/src/api_handler/user'
-import apiLogin from './SWK_React_Template/src/api_handler/login'
 
 export default function Main({name, icon, config}) {
+
+	const server_requests = require('./SWK_React_Template/src/server_handler/server_requests')(config)
+	
 
 	const [details, setDetails] = useState();
 	const [user, setUser] = useState();
 
 	//used when page change to 0
 	React.useEffect(() => {
-			
+		server_requests.user().then(_ => {
+			console.log(_);
+		})
 		//fetch user
-		apiUser.get_user(config)
+		server_requests.user()
 			.then(response => {
+				
 				//check if is empty
 				let response_lenght = Object.keys(response).length
 				
