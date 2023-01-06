@@ -5,7 +5,7 @@ import config from "../../config.json"
 import './App.css'
 import './SWK_React_Template/src/styles/App.css'
 
-import Main from './Main';
+import Main_Kn_Login from './Main_Kn_Login';
 
 function App() {
 	const name = "Login";
@@ -15,7 +15,7 @@ function App() {
 
 	return (
 
-		<Main name={name} icon={icon} config={config}></Main>
+		<Main_Kn_Login name={name} icon={icon} config={config}></Main_Kn_Login>
 
 	);
 }

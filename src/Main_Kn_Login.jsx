@@ -12,36 +12,31 @@ export default function Main({name, icon, config}) {
 	const [details, setDetails] = useState();
 	const [user, setUser] = useState();
 
-	//used when page change to 0
-	React.useEffect(() => {
-		server_requests.user().then(_ => {
-			console.log(_);
-		})
-		//fetch user
+	function fetch_user () {
 		server_requests.user()
 			.then(response => {
-				
-				//check if is empty
-				let response_lenght = Object.keys(response).length
-				
-				console.log(response)
-				if (response_lenght === 0) {
-					location.href = `${config.device_ip}:${config.port}/login`
-					return
+				if (response.details && response.user){
+					
+					setDetails(response.details);
+					setUser(response.user);	
 				}
-
 				else{
-					let response_copy = Object.assign({}, response)
-					Object.entries(response_copy).forEach(entry => {
-						response_copy[entry[0]] = entry[0]
-					})
-					setDetails(response_copy);
-					setUser(response);	
+					location.href = `${config.device_ip}:${config.port}/kn/login`
 				}
-
-				
-
 			});
+	}
+
+
+	//used when page change to 0
+	React.useEffect(() => {
+		fetch_user()
+
+		const interval = setInterval(() => {
+			
+		}, 10000);
+
+		return () => clearInterval(interval);
+		
 		
 	}, []);
 
