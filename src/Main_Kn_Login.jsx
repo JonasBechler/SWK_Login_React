@@ -4,7 +4,7 @@ import Header from "./SWK_React_Template/src/components/Header/Header";
 
 import AccountWidget from './SWK_React_Template/src/components/AccountWidget/AccountWidget';
 
-export default function Main({name, icon, config}) {
+export default function Main_Kn_Login({name, icon, config}) {
 
 	const server_requests = require('./SWK_React_Template/src/server_handler/server_requests')(config)
 	
@@ -50,7 +50,7 @@ export default function Main({name, icon, config}) {
 
 			<div className='Spacer'></div>
 
-			<AccountWidget title={"Response"} details={details} user={user}  config={config}></AccountWidget>
+			<AccountWidget title={"Benutzerdaten"} details={details} user={user}  config={config}></AccountWidget>
 
 			<div className='Spacer'></div>
 
