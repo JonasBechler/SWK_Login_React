@@ -4,7 +4,7 @@ import Header from "./SWK_React_Template/src/components/Header/Header";
 
 import AccountWidget from './SWK_React_Template/src/components/AccountWidget/AccountWidget';
 
-export default function Main_Kn_Login({name, icon, config}) {
+export default function MainKnLogin({name, icon, config}) {
 
 	const server_requests = require('./SWK_React_Template/src/server_handler/server_requests')(config)
 	
@@ -27,7 +27,6 @@ export default function Main_Kn_Login({name, icon, config}) {
 	}
 
 
-	//used when page change to 0
 	React.useEffect(() => {
 		fetch_user()
 
