@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import Header from "./SWK_React_Template/src/components/Header/Header";
-
 import AccountWidget from './SWK_React_Template/src/components/AccountWidget/AccountWidget';
+
 
 export default function MainKnLogin({name, icon, config}) {
 
@@ -21,9 +21,13 @@ export default function MainKnLogin({name, icon, config}) {
 					setUser(response.user);	
 				}
 				else{
-					location.href = `${config.device_ip}:${config.port}/kn/login`
+					window.location.href = `${config.device_ip}:${config.port}/kn/login`
 				}
-			});
+			})
+			.catch(error => {
+				console.log("Server error");
+				return
+			})
 	}
 
 

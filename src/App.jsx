@@ -9,7 +9,7 @@ import MainKnLogin from './MainKnLogin';
 function App() {
 	const name = "Login";
 	const icon = require("./KonstanzLoginLogo.png");
-	const config = require( "../../config.json");
+	const config = require( "./config.json");
 
 	config.port = config.login.port
 	config.port_react = config.login.port_react
