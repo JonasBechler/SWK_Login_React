@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import Header from "./SWK_React_Template/src/components/Header/Header";
-import AccountWidget from './SWK_React_Template/src/components/AccountWidget/AccountWidget';
+import Header from "./SWK_React_Template/src/components_intern/Header/Header";
+import AccountWidget from './SWK_React_Template/src/components_intern/AccountWidget/AccountWidget';
 
 
 export default function MainKnLogin({name, icon, config}) {
