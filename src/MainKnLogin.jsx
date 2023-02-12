@@ -53,7 +53,7 @@ export default function MainKnLogin({name, icon, config}) {
 
 			<div className='Spacer'></div>
 
-			<AccountWidget title={"Benutzerdaten"} details={details} user={user}  config={config}></AccountWidget>
+			<AccountWidget title={"FusionAuth Daten"} details={details} user={user}  config={config}></AccountWidget>
 
 			<div className='Spacer'></div>
 
