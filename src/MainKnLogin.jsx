@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Header from "./SWK_React_Template/src/components_intern/Header/Header";
+import Header from "./SWK_React_Template/src/components_basics/Header/Header";
 import AccountWidget from './SWK_React_Template/src/components_intern/AccountWidget/AccountWidget';
 
 
@@ -49,7 +49,8 @@ export default function MainKnLogin({name, icon, config}) {
 
 		<div className='Fill Column'>
 
-			<Header name={name} icon={icon} ></Header>
+			<Header name={name} icon={icon} isExtern={false}></Header>
+
 
 			<div className='Spacer'></div>
 

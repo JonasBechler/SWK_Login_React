@@ -6,7 +6,8 @@
     "device_ip_iphone": "http://172.20.10.2",
     "device_ip_lh_ip": "http://127.0.0.1",
     "device_ip_fixed": "http://192.168.178.100",
-    "device_ip": "http://192.168.178.100",
+    "device_ip_swk": "http://10.10.51.10",
+    "device_ip": "http://10.10.51.10",
 
 
     "fusionauth_port": 9011,
